@@ -20,6 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
+→ [日本語の解説](https://qiita.com/kentaro/items/26e22b4b6f3f6925969f)
+
 Using `Kenken` instance:
 
 ```ruby
