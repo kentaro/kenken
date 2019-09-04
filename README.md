@@ -42,7 +42,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/kenken. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kentaro/kenken. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## TODO
 
@@ -50,7 +50,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 
 ```ruby
 ken = "hayapi"
-puts ken ^ 2 #=> prints "kenken" instead of "hayapi"
+puts ken ^ 2 #=> prints "kenken" instead of "hayapihayapi"
 ```
 
 ## License
@@ -59,4 +59,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Kenken project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/kenken/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Kenken project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/kentaro/kenken/blob/master/CODE_OF_CONDUCT.md).
