@@ -51,6 +51,26 @@ puts ken ^ 2 #=> "kenken"
 
 It's just `Kenkenization.`
 
+## Methods
+
+### Kenken#^
+
+Returns a string generated from the name of the variable to which the object is bound.
+
+```ruby
+ken = "hayapi"
+puts ken ^ 2 #=> "kenken"
+```
+
+### Kenken#-
+
+Returns a string generated from the name of the variable to which the object is bound and subtracted the string passed into the method.
+
+```ruby
+kenken = "hayapi"
+puts kenken - "e" #=> knkn
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
