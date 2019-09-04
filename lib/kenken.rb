@@ -10,6 +10,15 @@ module Kenkenizer
 
     var.first.to_s * count
   end
+
+  def -(other = '')
+    b = binding.of_caller(1)
+    var = b.eval('local_variables').each do |v|
+      break v if self.hash == v.hash
+    end
+
+    var.first.to_s.delete(other)
+  end
 end
 
 class Kenken
