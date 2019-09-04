@@ -19,4 +19,19 @@ class KenkenTest < Minitest::Test
     obj = "ken"
     assert_equal (obj ^ 2), "kenken"
   end
+
+  def test_kenkenizer_subtract
+    obj = Kenken.new("kenken")
+    assert_equal (obj - 'e'), "knkn"
+  end
+  
+  def test_string_subtract
+    obj = String.new("kenken")
+    assert_equal (obj - 'e'), "knkn"
+  end
+
+  def test_string_literal_subtract
+    obj = "kenken"
+    assert_equal (obj - 'e'), "knkn"
+  end
 end

@@ -5,6 +5,10 @@ module Kenkenizer
     to_s * count    
   end
 
+  def -(other = '')
+    to_s.delete(other)
+  end
+
   def to_s
     @str
   end
