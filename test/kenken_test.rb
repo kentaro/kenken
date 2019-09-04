@@ -1,22 +1,51 @@
 require "test_helper"
 
-class KenkenTest < Minitest::Test
+class KenkenizerTest < Minitest::Test
   def test_that_it_has_a_version_number
     refute_nil ::Kenkenizer::VERSION
   end
+end
 
-  def test_kenkenizer_pow
-    obj = Kenken.new("ken")
-    assert_equal (obj ^ 2), "kenken"
+class KenkenTest < Minitest::Test
+  def test_pow
+    ken = Kenken.new("ken")
+    assert_equal (ken ^ 2), "kenken"
   end
-  
+
+  def test_pow_when_str_is_hayapi
+    ken = Kenken.new("hayapi")
+    assert_equal (ken ^ 2), "kenken"
+  end
+
+  def test_to_s
+    ken = Kenken.new("ken")
+    assert_equal ken.to_s, "ken"
+  end
+
+  def test_to_s_when_str_is_hayapi
+    ken = Kenken.new("hayapi")
+    assert_equal ken.to_s, "hayapi"
+  end
+end
+
+class StringTest < Minitest::Test
   def test_string_pow
-    obj = String.new("ken")
-    assert_equal (obj ^ 2), "kenken"
+    ken = String.new("ken")
+    assert_equal (ken ^ 2), "kenken"
+  end
+
+  def test_string_pow_when_str_is_hayapi
+    ken = String.new("hayapi")
+    assert_equal (ken ^ 2), "kenken"
   end
 
   def test_string_literal_pow
-    obj = "ken"
-    assert_equal (obj ^ 2), "kenken"
+    ken = "ken"
+    assert_equal (ken ^ 2), "kenken"
+  end
+
+  def test_string_literal_pow_when_str_is_hayapi
+    ken = "hayapi"
+    assert_equal (ken ^ 2), "kenken"
   end
 end
