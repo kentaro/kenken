@@ -26,6 +26,16 @@ class KenkenTest < Minitest::Test
     ken = Kenken.new("hayapi")
     assert_equal ken.to_s, "hayapi"
   end
+
+  def test_subtract
+    kenken = Kenken.new("ken")
+    assert_equal (kenken - "e"), "knkn"
+  end
+
+  def test_subtract_when_str_is_hayapi
+    kenken = Kenken.new("hayapi")
+    assert_equal (kenken - "e"), "knkn"
+  end
 end
 
 class StringTest < Minitest::Test
@@ -47,5 +57,25 @@ class StringTest < Minitest::Test
   def test_string_literal_pow_when_str_is_hayapi
     ken = "hayapi"
     assert_equal (ken ^ 2), "kenken"
+  end
+
+  def test_string_subtact
+    kenken = String.new("ken")
+    assert_equal (kenken - "e"), "knkn"
+  end
+
+  def test_string_subtact_when_str_is_hayapi
+    kenken = String.new("hayapi")
+    assert_equal (kenken - "e"), "knkn"
+  end
+
+  def test_string_literal_subtact
+    kenken = "ken"
+    assert_equal (kenken - "e"), "knkn"
+  end
+
+  def test_string_literal_subtact_when_str_is_hayapi
+    kenken = "hayapi"
+    assert_equal (kenken - "e"), "knkn"
   end
 end
