@@ -3,21 +3,21 @@ require "binding_of_caller"
 
 module Kenkenizer
   def ^(count = 1)
-    b = binding.of_caller(1)
-    var = b.eval('local_variables').each do |v|
-      break v if self.hash == v.hash
-    end
-
-    var.first.to_s * count
+    var.to_s * count
   end
 
   def -(other = '')
-    b = binding.of_caller(1)
-    var = b.eval('local_variables').each do |v|
-      break v if self.hash == v.hash
-    end
+    var.to_s.delete(other)
+  end
 
-    var.first.to_s.delete(other)
+  private
+
+  def var
+    b = binding.of_caller(2)
+    b.eval('local_variables').find do |v|
+      var = b.eval(v.to_s)
+      self == var
+    end
   end
 end
 
