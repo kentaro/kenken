@@ -44,12 +44,24 @@ class StringTest < Minitest::Test
     assert_equal (ken ^ 2), "kenken"
   end
 
+  def test_string_pow_when_same_str_is_defined
+    tanaken = String.new("ken")
+    ken = String.new("ken")
+    assert_equal (ken ^ 2), "kenken"
+  end
+
   def test_string_pow_when_str_is_hayapi
     ken = String.new("hayapi")
     assert_equal (ken ^ 2), "kenken"
   end
 
   def test_string_literal_pow
+    ken = "ken"
+    assert_equal (ken ^ 2), "kenken"
+  end
+
+  def test_string_literal_pow_when_same_str_is_defined
+    tanaken = "ken"
     ken = "ken"
     assert_equal (ken ^ 2), "kenken"
   end

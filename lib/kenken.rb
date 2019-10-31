@@ -16,7 +16,7 @@ module Kenkenizer
     b = binding.of_caller(2)
     b.eval('local_variables').find do |v|
       var = b.eval(v.to_s)
-      self == var
+      self.equal?(var)
     end
   end
 end
